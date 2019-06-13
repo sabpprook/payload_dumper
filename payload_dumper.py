@@ -100,9 +100,11 @@ if __name__ == '__main__':
 
     for part in dam.partitions:
         if args.list == True:
-            print("Name: " + part.partition_name)
-            print("Size: " + str(part.new_partition_info.size))
-            print("Hash: " + part.new_partition_info.hash.hex())
+            print("Name:\t\t" + part.partition_name)
+            print("Old Size:\t" + str(part.old_partition_info.size))
+            print("New Size:\t" + str(part.new_partition_info.size))
+            print("Old Hash:\t" + part.old_partition_info.hash.hex())
+            print("New Hash:\t" + part.new_partition_info.hash.hex())
             print()
             continue
 
